@@ -1,0 +1,36 @@
+button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.refresh_btn {
+  background-color: #324376;
+  margin-bottom: 2rem;
+}
+
+.remove_user_btn {
+  background-color: #f76c5e;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.user_container {
+  padding: 1rem;
+  color: #382c05;
+  background-color: #f5dd90;
+  border-radius: 5px;
+}
+
+.users_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
