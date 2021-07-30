@@ -13,7 +13,7 @@ export const App = (): JSX.Element => {
   }, []);
 
   const getUsers = async () => {
-    setIsLoading(true);
+    setIsLoading(false);
 
     try {
       const users = await getAllUsers();
@@ -28,7 +28,7 @@ export const App = (): JSX.Element => {
   };
 
   const removeUser = async (id: number) => {
-    setIsLoading(true);
+    setIsLoading(false);
 
     try {
       await deleteUser(id);

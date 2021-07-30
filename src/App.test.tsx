@@ -1,9 +1,9 @@
 import { App } from "./App";
 import { render, screen, waitFor } from "@testing-library/react";
-import { mockedUsers } from "./mocks/handlers";
 import { server } from "./mocks/server";
 import { rest } from "msw";
 import { BASE_URL, GetAllUsersResponse } from "./api/user";
+import { db } from "./mocks/db";
 
 test("displays list of users", async () => {
   render(<App />);
@@ -13,7 +13,9 @@ test("displays list of users", async () => {
   );
 
   await waitFor(() => {
-    mockedUsers.forEach((user) => {
+    const users = db.user.getAll();
+
+    users.forEach((user) => {
       expect(screen.getByText(user.email)).toBeInTheDocument();
     });
   });
